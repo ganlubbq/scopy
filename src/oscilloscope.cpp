@@ -971,6 +971,8 @@ void Oscilloscope::onChannelWidgetDeleteClicked()
 		} else {
 			Q_EMIT selectedChannelChanged(0);
 		}
+	} else if (curve_id == current_ch_widget) {
+		current_ch_widget = current_channel;
 	}
 
 	/* If the removed channel is before the current axis, we update the
